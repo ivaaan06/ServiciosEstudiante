@@ -63,7 +63,7 @@ public class EstudianteController {
     @Path("/consultarEstudiante")
     @Produces(MediaType.APPLICATION_JSON)
     @GET
-    public Response consultarEstudiantes(@Context HttpServletRequest request)throws  IOException{
+    public Response consultarEstudiantes(@Context HttpServletRequest request)throws  IOException, ClassNotFoundException{
         
             System.out.println(request.getRequestURI());
             List<EstudianteDto> listaEstudiantes = new ArrayList<EstudianteDto>();
@@ -109,7 +109,7 @@ public class EstudianteController {
     @Path("/insertarEstudiante")
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response insertarEstudiantes(EstudianteDto estudiante) throws IOException, ObjectException {
+    public Response insertarEstudiantes(EstudianteDto estudiante) throws IOException, ObjectException, ClassNotFoundException {
         requerimientos.validarEstudiante(estudiante,"/insertarEstudiante");
         
         try {
@@ -170,7 +170,7 @@ public class EstudianteController {
     @Path("/editarEstudiante")
     @PUT
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response editarEstudiante(EstudianteDto estudiante) throws ObjectException {
+    public Response editarEstudiante(EstudianteDto estudiante) throws ObjectException, ClassNotFoundException {
         boolean editado = false;
         requerimientos.validarEstudiante(estudiante,"/editarEstudiante");
         try {

@@ -3,6 +3,6 @@ com\unicundi\iyepitia\crudservicios\exception\LongitudException.class
 com\unicundi\iyepitia\crudservicios\exception\ExceptionWrraper.class
 com\unicundi\iyepitia\crudservicios\dto\EstudianteDto.class
 com\unicundi\iyepitia\crudservicios\service\Requerimientos.class
-com\unicundi\iyepitia\crudservicios\exception\EmptyObjectException.class
+com\unicundi\iyepitia\crudservicios\exception\ObjectException.class
 com\unicundi\iyepitia\crudservicios\exception\ExceptionHandler.class
 com\unicundi\iyepitia\crudservicios\exception\BussinessException.class
